@@ -32,3 +32,13 @@ def lambda_handler(event, context):
         Key="bronze_layer/to_processed/" + filename,
         Body=json.dumps(data)
     )
+
+    glue = boto3.client("glue")
+    gluejobname = "spotify_transformation_job"
+
+    try:
+        runId = glue.start_job_run(JobName = gluejobname)
+        status = glue.get_job_run(JobName = gluejobname, RunId = runId['JobRunId'])
+        print("Job Status: ", status['JobRun']['JobRunState'])
+    except Exception as e:
+        print(e)
