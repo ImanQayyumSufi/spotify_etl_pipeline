@@ -1,4 +1,4 @@
-# Spotify ETL Pipeline
+# Spotify Data Pipeline
 
 ## Introduction
 The client is deeply passionate about the music industry and is interested in gaining insights into global music trends. They aim to start by collecting data on the top global songs from the Billboard charts.
@@ -20,7 +20,7 @@ The project involves building a data pipeline that can automatically collect and
 
 This architecture is designed to be scalable, automated, and efficient, ensuring that the client receives up-to-date insights with minimal manual intervention.
 
-![spotify_data_pipeline.jpeg](https://prod-files-secure.s3.us-west-2.amazonaws.com/1683fe5a-2746-4f89-ba62-22b6981e9456/85155097-95fd-4f1f-9db3-10640fe01828/spotify_data_pipeline.jpeg)
+![spotify_data_pipeline.jpeg](spotify_data_pipeline_architecture_diagram.jpeg)
 
 ## **Workflow Summary:**
 
