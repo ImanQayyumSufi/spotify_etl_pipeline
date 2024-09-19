@@ -22,9 +22,25 @@ This architecture is designed to be scalable, automated, and efficient, ensuring
 
 ![spotify_data_pipeline.jpeg](spotify_data_pipeline_architecture_diagram.jpeg)
 
+## Technology Used
+1. Programming Language - Python, PySpark
+2. Scripting Language - SQL
+3. AWS Platform
+   - Lambda
+   - Cloudwatch
+   - S3
+   - Glue
+4. Data Warehouse - Snowflake and Snowpipe
+   
 ## **Workflow Summary:**
 
 1. **Extraction**: The process begins with CloudWatch triggering the AWS Lambda function, which extracts the top 50 songs data from the Spotify API and stores it as raw data in S3.
 2. **Transformation**: AWS Glue processes the raw data, performing necessary transformations, and stores the transformed data in another S3 bucket.
 3. **Loading**: Snowpipe detects the new transformed data and automatically loads it into Snowflake, where it is stored and organized for analysis.
 4. **Visualization**: Finally, Power BI connects to Snowflake to allow data analysts to create visualizations and reports based on the data.
+
+## Dataset Used
+Using Spotify API that can be access on the Spotify Developer website.The top 50 songs globally can be accessed using the link https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF
+
+## Documentation
+See how I documented my process on building this pipeline here: https://skinny-key-516.notion.site/Spotify-Data-Pipeline-Project-d941261c3d764a2d854730b8bf0b72c0?pvs=4 
